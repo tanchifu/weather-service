@@ -2,16 +2,39 @@
   "name": "service-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/http-server",
   "engines": {
     "node": ">=6.0.0"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/http-server",
+    "pretest": "common bin/http-server lib/ test",
+    "test": "vows --spec --isolate"
   },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "4.14.0"
+    "colors": "1.0.3",
+    "corser": "~2.0.0",
+    "ecstatic": "^3.0.0",
+    "http-proxy": "^1.8.1",
+    "opener": "~1.4.0",
+    "optimist": "0.6.x",
+    "portfinder": "^1.0.13",
+    "union": "~0.4.3"
+  },
+  "devDependencies": {
+    "common-style": "^3.0.0",
+    "request": "2.49.x",
+    "vows": "0.7.x"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "http-server": "./bin/http-server",
+    "hs": "./bin/http-server"
   }
 }

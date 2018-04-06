@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather app</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtfK4fFMqwgZPrZP_lMRbNfkyu2Cvk6jI&v=3.exp&sensor=false&libraries=places"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/32/8/common.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/32/8/util.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/32/8/controls.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/32/8/places_impl.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/32/8/geocoder.js"></script>
+    <script src="https://maps.googleapis.com/maps-api-v3/api/js/32/8/stats.js"></script>
+  </head>
+  <body style="font-family: 'Gill Sans', sans-serif;">
+    <div>
+      <img style="max-width:185px;width:50%;float:none;margin-right:20px" src="./img/logo.png"/>
+      <h1>Weather for the past 7 days</h1>
+    </div>
+    <div>
+      <div style="margin-bottom:5px">Enter a US address or city</div>
+      <input type="text" id="my-address" size="20" style="width:220px">
+      <button id="getCords" onClick="codeAddress();">Fetch Weather</button>
+      <div id="result-panel">
+      
+      </div>
+    </div>
+    
+  </body>
+</html>
+

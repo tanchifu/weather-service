@@ -1,0 +1,29 @@
+.day-block {
+  float: left;
+  border-radius: 8px;
+  border: 1px solid rgb(117, 109, 131);
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 4px; 
+  width: 200px;
+  height: 220px;
+}
+
+.date {
+  font-size: smaller;
+  color: #888;
+}
+
+.summary {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.sub-info {
+  font-size: smaller;
+  margin-left: 5px;
+}
+
+.error {
+  color: red;
+}
