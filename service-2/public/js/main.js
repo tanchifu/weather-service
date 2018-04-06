@@ -19,6 +19,9 @@ function initialize() {
 }
 
 function reportDay(index, weatherObj) {
+  if (weatherObj.error) {
+  	return "<div class='day-block'><h4>Day -" + index + "</h4><div class='date'>" + weatherObj.error + "</div></div>";
+  }
   let result = "<div class='day-block'><h4>Day -" + index + "</h4><div class='date'>" + weatherObj.dateTime.substring(0, 10) + "</div>";
   result += "<div class='summary'>" + weatherObj.summary + "</div>";
   result += "<div class='sub-info'>High: " + weatherObj.temperatureHigh + "   Low: " + weatherObj.temperatureLow + "</div>";

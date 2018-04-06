@@ -1,3 +1,4 @@
+/*eslint-disable no-extra-parens */
 "use strict";
 // BASE SETUP
 // =============================================================================
@@ -76,7 +77,9 @@ router.get('/last-week', function(req, res) {
 			DarkSkyApi.loadTime(time, position) // or '2000-04-06T12:20:05' aka moment.format()
 				.then(result => {
 					// console.log(result);
-					const data = (result && result.daily && result.daily.data) ? result.daily.data[0] : undefined;
+					const data = (result && result.daily && result.daily.data && Array.isArray(result.daily.data) && result.daily.data.length > 0)
+						? result.daily.data[0]
+						: {"error": "Inalid daily data!"};
 					resolve(data);
 				})
 				.catch(err => reject(err));
