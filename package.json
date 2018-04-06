@@ -1,5 +1,5 @@
 {
-  "name": "node-microservices-example",
+  "name": "weather-service",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "create-react-app": "^1.5.2",
     "express": "4.14.0"
   }
 }
